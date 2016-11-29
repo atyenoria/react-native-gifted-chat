@@ -12,7 +12,7 @@ export default class Time extends React.Component {
     return (
       <View style={[styles[this.props.position].container, this.props.containerStyle[this.props.position]]}>
         <Text style={[styles[this.props.position].text, this.props.textStyle[this.props.position]]}>
-          {moment(this.props.currentMessage.createdAt).locale(this.context.getLocale()).format('LT')}
+          { moment(this.props.currentMessage.createdAt).locale(this.context.getLocale()).format('LT')+ " by " + this.props.currentMessage.user.name}
         </Text>
       </View>
     );
