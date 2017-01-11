@@ -11,6 +11,7 @@ import ActionSheet from '@exponent/react-native-action-sheet';
 import dismissKeyboard from 'react-native-dismiss-keyboard';
 import moment from 'moment/min/moment-with-locales.min';
 
+import * as utils from './utils';
 import Actions from './Actions';
 import Avatar from './Avatar';
 import Bubble from './Bubble';
@@ -67,7 +68,7 @@ class GiftedChat extends React.Component {
 
     this.invertibleScrollViewProps = {
       inverted: true,
-      keyboardShouldPersistTaps: true,
+      keyboardShouldPersistTaps: 'always',
       onTouchStart: this.onTouchStart,
       onTouchMove: this.onTouchMove,
       onTouchEnd: this.onTouchEnd,
@@ -542,4 +543,5 @@ export {
   Message,
   Send,
   Time,
+  utils
 };
